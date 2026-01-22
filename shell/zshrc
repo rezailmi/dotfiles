@@ -1,0 +1,39 @@
+export PATH="$HOME/.local/bin:$PATH"
+
+# bun completions
+[ -s "/Users/rezailmi/.bun/_bun" ] && source "/Users/rezailmi/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# history
+HISTSIZE=5000
+SAVEHIST=5000
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+
+# completion (case-insensitive)
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# aliases
+alias ls='ls -G'
+alias cdls='cd $(zoxide query --list | fzf --header "Choose directory:")'
+
+# pure prompt
+autoload -U promptinit; promptinit
+prompt pure
+
+# plugins
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# fzf
+source <(fzf --zsh)
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+# Load machine-specific config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
