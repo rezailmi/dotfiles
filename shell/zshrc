@@ -20,6 +20,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # aliases
 alias ls='ls -G'
 alias cdls='cd $(zoxide query --list | fzf --header "Choose directory:")'
+alias cc='claude --dangerously-skip-permissions'
 
 # pure prompt
 autoload -U promptinit; promptinit
