@@ -9,6 +9,8 @@ dotfiles/
 ├── Brewfile          # Homebrew packages, casks, and VS Code extensions
 ├── git/
 │   └── gitconfig     # Git configuration (sources ~/.gitconfig.local)
+├── ghostty/
+│   └── config        # Ghostty terminal configuration
 ├── shell/
 │   └── zshrc         # Zsh configuration (sources ~/.zshrc.local)
 └── install.sh        # Symlinks configs to home directory

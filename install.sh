@@ -10,6 +10,11 @@ echo "→ Linked gitconfig"
 ln -sf "$DOTFILES_DIR/shell/zshrc" ~/.zshrc
 echo "→ Linked zshrc"
 
+# Ghostty
+mkdir -p ~/.config/ghostty
+ln -sf "$DOTFILES_DIR/ghostty/config" ~/.config/ghostty/config
+echo "→ Linked ghostty config"
+
 echo ""
 echo "Done! Reload shell: source ~/.zshrc"
 echo ""
