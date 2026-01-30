@@ -13,8 +13,8 @@ echo "→ Linked gitconfig"
 ln -sf "$DOTFILES_DIR/shell/zshrc" ~/.zshrc
 echo "→ Linked zshrc"
 
-mkdir -p ~/.config/ghostty
-ln -sf "$DOTFILES_DIR/ghostty/config" ~/.config/ghostty/config
+mkdir -p "$HOME/Library/Application Support/com.mitchellh.ghostty"
+ln -sf "$DOTFILES_DIR/ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 echo "→ Linked ghostty config"
 
 echo "==> Installing npm global packages..."
