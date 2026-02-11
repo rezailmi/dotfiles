@@ -1,4 +1,4 @@
-theme = "Gruvbox Light"
+theme = Catppuccin Latte
 font-family = "JetBrains Mono"
 keybind = shift+enter=text:\x1b\r
 window-padding-x = 12
