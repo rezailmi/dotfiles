@@ -36,3 +36,6 @@ source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# Load machine-specific config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
