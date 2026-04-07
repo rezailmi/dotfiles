@@ -23,6 +23,7 @@ alias cdls='cd $(zoxide query --list | fzf --header "Choose directory:")'
 alias cc='claude --dangerously-skip-permissions'
 
 # pure prompt
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -35,6 +36,3 @@ source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-# Load machine-specific config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
